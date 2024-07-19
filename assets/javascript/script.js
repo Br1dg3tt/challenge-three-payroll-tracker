@@ -35,7 +35,7 @@ employees.push(employee);
 // Displays the average salary in the console
 const displayAverageSalary = function(employees) {
   for ( let employee of employees) {
-    employee.salary += parseInt (employee.salary);
+    total += parseInt (employee.salary);
     avg = total / employees.length;
   }
   console.log(`Average Salary: ${avg}`);

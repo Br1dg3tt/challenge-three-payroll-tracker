@@ -14,7 +14,7 @@ When the live webpage is opened, user is presented with a simple payroll tracker
 
 Website Link: https://br1dg3tt.github.io/challenge-three-payroll-tracker/
 
-![screenshot of webpage](assets/images/screenshot2.png)
+![screenshot of webpage](assets/images/screenshot.png)
 
 ## Credits
 
