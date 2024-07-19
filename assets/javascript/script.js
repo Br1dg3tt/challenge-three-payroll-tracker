@@ -1,6 +1,10 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
+//Keeps adding employees
+const employees = [];
+let total = 0;
+let avg;
 // Collect employee data
 const collectEmployees = function() {
 
@@ -17,26 +21,30 @@ const employee = {
 }
 
 //created a way to contain the array of multiple employees
-const employeesArray = [];
-employeesArray.push(employee);
+employees.push(employee);
 
 //added a pop up question to see if user wants to add another employee and loops back to the original prompts until user hits cancel
-  const confirmAdd = confirmAdd("Would you like to add another employee?");
+  const confirmAdd = confirm("Would you like to add another employee?");
   if (confirmAdd === true) {
     collectEmployees();
   } else {
   }
-  return employeesArray;
-};
-
-// Display the average salary
-const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+  //needed to return all employees array
+  return employees;
+}
+// Displays the average salary in the console
+const displayAverageSalary = function(employees) {
+  for ( let employee of employees) {
+    employee.salary += parseInt (employee.salary);
+    avg = total / employees.length;
+  }
+  console.log(`Average Salary: ${avg}`);
 }
 
-// Select a random employee
-const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+// Select a random employee using a randomizing function
+const getRandomEmployee = function(employees) {
+const randomEmployee = employees[Math.floor(Math.random() * employees.length)];
+console.log(`Congratulations ${randomEmployee.firstName} ${randomEmployee.lastName}, the winner of our random drawing!`)
 }
 
 /*
