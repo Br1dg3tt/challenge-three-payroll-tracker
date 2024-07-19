@@ -3,20 +3,24 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
-  // TODO: Get user input to create and return an array of employee objects
+
+  // Added three prompts for each unit of information we want to request from the user
   const firstName = prompt("Enter the first name of the employee");
   const lastName = prompt("Enter the last name of the employee");
   const salary = prompt("Enter the salary of the employee");
 
+ //Made a combination of input information to have the value of 'employee'
 const employee = {
   firstName: firstName,
   lastName: lastName,
   salary: salary,
 }
 
+//created a way to contain the array of multiple employees
 const employeesArray = [];
 employeesArray.push(employee);
 
+//added a pop up question to see if user wants to add another employee and loops back to the original prompts until user hits cancel
   const confirmAdd = confirmAdd("Would you like to add another employee?");
   if (confirmAdd === true) {
     collectEmployees();
